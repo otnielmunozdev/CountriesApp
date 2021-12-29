@@ -1,0 +1,14 @@
+<div class="containerBody  nio-scrollbar-gray" id="containerBody">
+  <div class="containerCards" *ngIf="charactersArray.length > 0">
+    <div class="card col-lg-4 col-md-3 col-sm-12" style="width: 18rem;" *ngFor="let character of charactersArray"
+      style="float: left;">
+      <app-card-character [character]="character"></app-card-character>
+    </div>
+  </div>
+  <div class="noResults" *ngIf="showNoresult && charactersArray.length == 0">
+    <p>No results</p>
+  </div>
+  <div class="noResults" *ngIf="showLoading">
+    <p>Loading...</p>
+  </div>
+</div>

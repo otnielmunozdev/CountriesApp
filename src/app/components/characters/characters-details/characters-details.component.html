@@ -1,0 +1,15 @@
+<div class="containerDetail" *ngIf="character | async as character">
+  <div class="containerBody nio-scrollbar-gray" id="containerBody">
+    <img class="card-img-top imgProfile" [src]="character.image" [alt]="character.name">
+  </div>
+  <h5 class="card-title" style="margin: 20px;">{{character.name}}</h5>
+  <div style="display: flex;justify-content: center;margin-bottom: 13px;">
+    <div class="statusCircle" [ngClass]="{'redStatus': character.status != 'Alive'}"></div>
+    <p class="card-text specie"> Status: {{character.status}}</p>
+  </div>
+  <p class="card-text">Specie: {{character.species}}</p>
+  <p class="card-text">Gender: {{character.gender}}</p>
+  <p class="card-text">Location: {{character.location.name}}</p>
+  <p class="card-text">Created: {{character.created | date}}</p>
+  <a class="btn btn-primary" (click)="back();">Back</a>
+</div>

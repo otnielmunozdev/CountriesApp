@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: black !important;
+}
+
+.nio-scrollbar,
+[class*=" nio-scrollbar"],
+[class^="nio-scrollbar"] {
+  overflow: auto;
+}
+
+[class*=" nio-scrollbar"]::-webkit-scrollbar,
+[class^="nio-scrollbar"]::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+.nio-scrollbar-invisible::-webkit-scrollbar {
+  display: none;
+}
+
+/* Track */
+[class*=" nio-scrollbar"]::-webkit-scrollbar-track,
+[class^="nio-scrollbar"]::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+[class*=" nio-scrollbar"]::-webkit-scrollbar-thumb,
+[class^="nio-scrollbar"]::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: #50BB82;
+}
+
+[class*=" nio-scrollbar"]::-webkit-scrollbar-thumb:window-inactive,
+[class^="nio-scrollbar"]::-webkit-scrollbar-thumb:window-inactive {
+  background: #50BB82;
+}
+
+.nio-scrollbar-gray::-webkit-scrollbar-thumb {
+  background: lightgrey;
+}
+
+.nio-scrollbar-gray::-webkit-scrollbar-thumb:window-inactive {
+  background: lightgrey;
+}
+
+.modal-content{
+  border-radius: 16px !important;
+}

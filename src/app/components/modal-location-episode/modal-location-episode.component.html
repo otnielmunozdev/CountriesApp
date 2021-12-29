@@ -1,0 +1,51 @@
+<div class="containerPrincipal">
+    <span class="closeModalX" (click)="closeModal()">x</span>
+    <div class="containerTabs">
+        <div class="tab" [ngClass]="{'tabActive': currentTab == this.typeFilter.location}" (click)="currentTab = this.typeFilter.location;eventScroll(typeFilter.location);">
+            Locations
+        </div>
+        <div class="tab"  [ngClass]="{'tabActive': currentTab == this.typeFilter.episode}" (click)="currentTab = this.typeFilter.episode;eventScroll(this.typeFilter.episode);">
+            Episodes
+        </div>
+    </div>
+    <div class="containerList" *ngIf="currentTab == this.typeFilter.location">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search location" aria-label="Search"
+        (keyup)="search($event.target,typeFilter.location);"
+        #inputSearch id="searchInput" style="margin-bottom: 20px">
+        <div class="nio-scrollbar-gray containerCardInfo" id="containerCardInfo" *ngIf="locationsArray.length > 0">
+            <div class="cardLocation" *ngFor="let location  of locationsArray">
+                <div (click)="goFilter(location,typeFilter.location)">
+                    <h3 class="locationNameText">{{location.name}}</h3>
+                    <p>Dimension: {{location.dimension}}</p>
+                    <p>Type: {{location.type}}</p>
+                    <p>Created: {{location.created | date}}</p>
+                </div>
+               
+            </div>
+        </div>
+            <div class="noResults" *ngIf="locationsArray.length == 0">
+                <p>No results :( ... try searching again</p>
+            </div>
+       
+    </div>
+    <div class="containerList" *ngIf="currentTab == typeFilter.episode" >
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Episode" aria-label="Search"
+        (keyup)="search($event.target,typeFilter.episode);"
+        #inputSearchEpisode id="searchInputEpisode" style="margin-bottom: 20px">
+        <div class="nio-scrollbar-gray containerCardInfo" id="containerCardEpisodeInfo" *ngIf="episodesArray.length > 0">
+            <div class="cardLocation" *ngFor="let episode  of episodesArray">
+                <div (click)="goFilter(episode,typeFilter.episode)">
+                    <h3 class="locationNameText">{{episode.name}}</h3>
+                    <p>Episode: {{episode.episode}}</p>
+                    <p>Air date: {{episode.air_date | date}}</p>
+                    <p>Created: {{episode.created | date}}</p>
+                </div>
+               
+            </div>
+        </div>
+            <div class="noResults" *ngIf="episodesArray.length == 0">
+                <p>No results :( ... try searching again</p>
+            </div>
+       
+    </div>
+</div>
