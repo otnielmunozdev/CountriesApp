@@ -28,9 +28,9 @@ export class InputSearchComponent implements OnInit, AfterViewInit {
     }, 1000);
   }
 
-  searchCharacter(name:any){
+  searchCountry(name:any){
     let value = name.value;
-      this.router.navigate(['/character-list'],{
+      this.router.navigate(['/country-list'],{
         queryParams:{search:value}
       });
   }

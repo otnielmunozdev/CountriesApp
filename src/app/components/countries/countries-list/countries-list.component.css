@@ -1,9 +1,10 @@
 .containerBody {
-  background-color: black;
-  height: 100vh;
+  /* background-color: black; */
+  /* height: 100vh; */
+  height: calc(100vh - 82px);
   display: flex;
   justify-content: center;
-  padding-top: 122px;
+  /* padding-top: 122px; */
   z-index: 1;
 }
 
@@ -15,6 +16,8 @@
 .containerCards .card {
   margin: 0px 0px 15px 0px;
   border-radius: 16px;
+  background-color: #050505a8;
+  color: #FFF;
 }
 
 .card:hover {
@@ -24,7 +27,7 @@
 @media (min-width: 767px) {
   .containerCards .card {
     margin: 0px 25px 15px 0px;
-    width: 29%;
+    width: 30%;
   }
 }
 
@@ -78,3 +81,19 @@
   color: #FFF;
   font-size: 42px;
 }
+
+  .moreInfo{
+    color: #fff;
+    background-color: transparent;
+    border-color: #FFF;
+    margin: 14px 0px;
+
+  }
+
+  .moreInfo:hover{
+    background-color: #051620;
+  }
+
+  .containerCards .card:hover{
+    background-color: #050505de;
+  }

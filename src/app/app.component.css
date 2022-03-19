@@ -1,0 +1,25 @@
+.container{
+    padding-top: 82px;
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 772px) {
+    .container{
+        height: 137vh;
+    }
+}
+
+
+@media screen and (max-height: 640px) {
+    .container{
+        height: 152vh;
+    }
+}
+
+
+@media screen and (max-height: 640px) and (max-width: 800px)  {
+    .container{
+        height: 252vh;
+    }
+}

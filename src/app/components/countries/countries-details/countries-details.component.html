@@ -1,0 +1,34 @@
+<div class="containerDetail" *ngIf="country">
+  <div class="backIcon" (click)="back();"><span class="icon">&#8592;</span></div>
+  <div class="containerBody nio-scrollbar-gray" id="containerBody">
+    <div class="containDivInfo">
+      <img class="card-img-top imgProfile img-fluid" [src]="country.flags.png" [alt]="country.name.common">
+    </div>
+    <div class="containDivInfo">
+      <h5 class="card-title pharaps nameCountryOfficial"><strong>{{country.name.official}}</strong> </h5>
+      <h5 class="card-title pharaps"><strong> ({{country.name.common}})</strong></h5>
+      <h6 class="card-title capital pharaps"><strong>Capital:</strong> {{country.capital}}</h6>
+      <div class="containerPharaps">
+        <p><strong>Continents: </strong>{{country.continents}}</p>
+        <p><strong>Region: </strong>{{country.region}}</p>
+        <p><strong>Sub Region: </strong>{{country.subregion}}</p>
+      </div>
+      <div class="containerPharaps">
+        <p><strong>Population: </strong>{{country.population | number: '1.0' }}</p>
+        <p><strong>Languages: </strong>{{displayLanguages(country.languages)}}</p>
+        <p><strong>Currency: </strong>{{displayCurrencies(country.currencies)}}</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a (click)="goMap(country.maps.googleMaps)" class="refMap">Go to the map</a>
+  </div>
+
+</div>
+<div class="noResults" *ngIf="showLoading && country">
+  <p>Loading</p>
+  <div class="loader"></div>
+</div>
+<div class="noResults" *ngIf="!country && !showLoading">
+  <p>No results</p>
+</div>

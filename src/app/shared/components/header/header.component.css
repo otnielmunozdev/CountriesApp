@@ -4,11 +4,14 @@
     position: fixed;
     width: 100%;
     z-index: 100;
+    box-shadow: 0px 1px 15px #fff;
+
 
 }
 
 .navbar img{
-    width: 100px;
+    width: 40px;
+    margin: 10px;
 }
 
 .navbar .navbarContainer{
@@ -36,7 +39,14 @@
     cursor: pointer;
 }
 
-.containerInputSearchCharacter{
+.containerInputSearchCountry{
     width: 34%;
     padding-top: 9px;
+}
+
+
+@media screen and (max-width: 530px) {
+    .textFilter{
+        display: none;
+    }
 }

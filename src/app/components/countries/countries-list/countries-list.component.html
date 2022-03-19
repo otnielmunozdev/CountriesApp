@@ -1,0 +1,15 @@
+<div class="containerBody  nio-scrollbar-gray" id="containerBody">
+  <div class="containerCards" *ngIf="countriesArray.length > 0">
+    <div class="card col-lg-4 col-md-3 col-sm-12" style="width: 18rem;" *ngFor="let country of countriesArray"
+      style="float: left;">
+      <app-country-card [country]="country"></app-country-card>
+    </div>
+  </div>
+  <div class="noResults" *ngIf="showNoresult && countriesArray.length == 0">
+    <p>No results</p>
+  </div>
+  <div class="noResults" *ngIf="showLoading">
+    <p>Loading</p>
+    <div class="loader"></div>
+  </div>
+</div>

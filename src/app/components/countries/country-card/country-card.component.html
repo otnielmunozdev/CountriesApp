@@ -1,0 +1,8 @@
+<img class="card-img-top imgProfile" [src]="country.flags.png" [alt]="country.name.common">
+<div class="card-body">
+    <h5 class="card-title countryNames"><strong>{{country.name.official}}</strong></h5>
+    <h5 class="card-title countryNames">({{country.name.common}})</h5>
+    <h6 class="card-title"><strong>Region:</strong> {{country.region}}</h6>
+    <h6 class="card-title"><strong>Sub Region:</strong> {{country.subregion}}</h6>
+    <a class="btn btn-primary moreInfo" (click)="goDetails(country.cca2);">More info...</a>
+</div>

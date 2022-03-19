@@ -7,7 +7,7 @@
       "@app/*": ["src/app/*"],
       "@shared/*": ["src/app/shared/*"],
       "@enviroment/*": ["src/enviroment/*"],
-      "@characters/*": ["src/app/components/characters/*"],
+      "@characters/*": ["src/app/components/countries/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -27,7 +27,8 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

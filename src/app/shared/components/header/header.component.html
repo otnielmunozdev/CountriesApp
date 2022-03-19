@@ -1,11 +1,10 @@
 <nav class="navbar">
     <div class="navbarContainer">
         <div class="containerInputSearchFilter">
-           <img src="../../../assets/imgs/logoRickmorty.jpg" alt="Logo"
-           (click)="goHome()" class="logo">
-           <span class="textFilter" (click)="modalOpen()">+ Add Filter</span>
+            <img src="../../../assets/imgs/world.png" alt="Logo" (click)="goHome()" class="logo">
+            <span (click)="goHome()" class="textFilter">Countries of the world</span>
         </div>
-        <div class="containerInputSearchCharacter">
+        <div class="containerInputSearchCountry">
             <app-input-search></app-input-search>
         </div>
     </div>

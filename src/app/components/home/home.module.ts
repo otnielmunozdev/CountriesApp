@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { CharactersModule } from '../characters/characters.module';
+import { CountriesModule } from '../countries/countries.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { CharactersModule } from '../characters/characters.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CharactersModule
+    CountriesModule
   ]
 })
 export class HomeModule { }
